@@ -1,20 +1,10 @@
 import { Trash2 } from "lucide-react";
 import { memo } from "react";
+import { getLetterGrade } from "../gradeScale";
+
 const Gradeitem = ({ item, index, onDelete }) => {
-   console.log("Gradeitem rendered:", item.subjectName);
-    
-    
   const percentage =
     (Number(item.markScored) / Number(item.totalScored)) * 100;
-
-  const calculateGrade = (percentage) => {
-    if (percentage >= 90) return "A+";
-    if (percentage >= 80) return "A";
-    if (percentage >= 70) return "B";
-    if (percentage >= 60) return "C";
-    if (percentage >= 50) return "D";
-    return "F";
-  };
 
   return (
     <div className="flex items-center justify-between gap-3 rounded-lg border border-slate-100 px-3 py-2.5">
@@ -33,7 +23,7 @@ const Gradeitem = ({ item, index, onDelete }) => {
             {percentage.toFixed(1)}%
           </p>
           <p className="text-xs font-medium text-blue-600">
-            {calculateGrade(percentage)}
+            {getLetterGrade(percentage)}
           </p>
         </div>
 

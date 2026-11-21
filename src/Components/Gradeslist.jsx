@@ -13,10 +13,10 @@ const clearAll = () => {
 }
 
   const deleteGrade = useCallback((selectedIndex) => {
-  setSubject((prevSubject) =>
-    prevSubject.filter((item, index) => index !== selectedIndex)
-  );
-}, []);
+    setSubject((prevSubject) =>
+      prevSubject.filter((item, index) => index !== selectedIndex)
+    );
+  }, [setSubject]);
 
  
 
