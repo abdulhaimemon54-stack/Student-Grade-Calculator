@@ -1,6 +1,6 @@
 import { ChartNoAxesCombined } from "lucide-react";
 import Subjectnumber from "./YourResult/Subjectnumber";
-import Percentage from "./YourResult/percentage";
+import Percentage from "./YourResult/Percentage";
 import Overallaverage from "./YourResult/Overallaverage";
 
 const Yourresult = () => {
